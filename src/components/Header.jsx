@@ -10,21 +10,26 @@ const Header = () => {
           <a href="#">Studio</a>
           <a href="#">Insights</a>
         </menu>
-        
-        <button className="menu lg:hidden">Menu</button>
-        <menu className="mobile-nav hidden ">
-          <a href="#">Projects</a>
-          <a href="#">Services</a>
-          <a href="#">Studio</a>
-          <a href="#">Insights</a>
-        </menu>
+
+        <div className="mobile-nav-container">
+          <button className="menu lg:hidden">Menu</button>
+
+          <menu className="mobile-nav hidden">
+            <a href="#">Projects</a>
+            <a href="#">Services</a>
+            <a href="#">Studio</a>
+            <a href="#">Insights</a>
+          </menu>
+        </div>
       </nav>
 
       <div className="header-logo">
         <img src="/logo.png" alt="zenith-logo" className="w-10" />
       </div>
 
-      <button className="contact-us lg:underline hover:no-underline">Contact</button>
+      <button className="contact-us lg:underline hover:no-underline">
+        Contact <span className="text-ab hidden lg:inline">US</span>
+      </button>
     </header>
   );
 };
