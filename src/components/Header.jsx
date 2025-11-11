@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="main-header flex items-center justify-between p-5">
+    <header className="relative main-header flex items-center justify-between p-5 z-99">
       <nav className="nav-menu">
         <menu className="desktop-nav hidden lg:flex gap-5">
           <a href="#">Projects</a>
@@ -24,7 +24,7 @@ const Header = () => {
       </nav>
 
       <div className="header-logo">
-        <img src="/logo.png" alt="zenith-logo" className="w-10" />
+        <a href=""><img src="/logo.png" alt="zenith-logo" className="w-30" /></a>
       </div>
 
       <button className="contact-us lg:underline hover:no-underline">

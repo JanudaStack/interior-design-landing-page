@@ -12,6 +12,7 @@ a {
   letter-spacing: .1rem;
   font-size: .8rem;
   font-weight: 600;
+  color: white;
 }
 
 button {
@@ -21,4 +22,12 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+}
+
+.menu {
+  color: white;
+}
+
+.contact-us {
+  color: white;
 }
