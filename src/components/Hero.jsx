@@ -13,6 +13,16 @@ const Hero = () => {
                         alt="Interior design hero"
                     />
                 </picture>
+
+                <div className="hero-text">
+                    <h2 className="hero-heading">Timeless Tailored Spaces</h2>
+                    <div className="hero-heading-tablet">
+                        <span className="line-1">Timeless</span> <br />
+                        <span className="line-2">Tailored</span> <br />
+                        <span className="line-3">Spaces</span>
+
+                    </div>
+                </div>
             </div>
         </section>
     );

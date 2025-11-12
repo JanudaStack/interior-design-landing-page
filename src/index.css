@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --font-heading:"Cormorant Garamond", serif ;
-  --font-body:"Montserrat", sans-serif; 
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
 }
 
 a {
   font-family: var(--font-body);
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: .1rem;
-  font-size: .8rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: white;
 }
@@ -18,7 +18,7 @@ a {
 button {
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -30,4 +30,41 @@ button {
 
 .contact-us {
   color: white;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-heading {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 6rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+
+  .hero-heading {
+    display: none;
+  }
+  .hero-heading-tablet {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hero-heading-tablet span {
+    font-size: 6rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: white;
+  }
+
+
 }
