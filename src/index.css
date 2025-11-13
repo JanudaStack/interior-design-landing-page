@@ -32,39 +32,123 @@ button {
   color: white;
 }
 
+.hero-section {
+  position: relative;
+}
+
+/* container + image */
+.hero-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* common text styles */
 .hero-text {
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* Mobile stacked heading (fallback) */
+.hero-heading {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  line-height: 0.85;
+  font-size: clamp(2.5rem, 9vw, 6.5rem); /* responsive */
+  letter-spacing: 0.08em;
+  margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
 }
 
-.hero-heading {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 6rem;
-  color: white;
+/* Desktop / larger screens: position each line individually */
+.hero-heading-tablet {
+  display: none;
 }
 
+/* show tablet/desktop variant at >=768px */
 @media (min-width: 768px) {
-
   .hero-heading {
     display: none;
   }
   .hero-heading-tablet {
     display: block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    pointer-events: none;
   }
 
   .hero-heading-tablet span {
-    font-size: 6rem;
-    font-family: var(--font-heading);
+    display: block;
+    position: absolute;
     font-weight: 500;
-    color: white;
+    letter-spacing: 0.1em;
+    line-height: 0.85;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
   }
 
+  /* tune these positions to match your image composition precisely */
+  .hero-heading-tablet .line-1 {
+    font-size: clamp(4rem, 9vw, 10rem);
+    top: 6%;
+    left: 2%;
+  }
 
+  .hero-heading-tablet .line-2 {
+    font-size: clamp(5rem, 11vw, 12rem);
+    top: 30%;
+    right: 6%;
+    transform: translateX(6%);
+  }
+
+  .hero-heading-tablet .line-3 {
+    font-size: clamp(4rem, 9vw, 10rem);
+    top: 56%;
+    left: 8%;
+  }
+}
+
+/* Larger desktop tweaks */
+@media (min-width: 1200px) {
+  .hero-heading-tablet .line-1 {
+    top: 3%;
+    left: 2%;
+    font-size: 12.5rem;
+  }
+  .hero-heading-tablet .line-2 {
+    top: 30%;
+    right: 6%;
+    font-size: 14rem;
+    transform: translateX(6%);
+  }
+  .hero-heading-tablet .line-3 {
+    top: 60%;
+    left: 8%;
+    font-size: 11.5rem;
+  }
 }

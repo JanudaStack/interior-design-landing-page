@@ -1,27 +1,28 @@
 import React from "react";
 
+
 const Hero = () => {
     return (
-        <section className="hero-section absolute top-0">
+        <section className="hero-section">
             <div className="hero-wrapper">
-                <picture className="">
-                    <source srcset="/assets/hero-img.jpg" media="(min-width: 1024px)"  />
-                    <source srcset="/assets/hero-img-tablet.jpg" media="(min-width: 768px)"/>
+                <picture>
+                    <source srcSet="/assets/hero-img.jpg" media="(min-width: 1024px)" />
+                    <source srcSet="/assets/hero-img-tablet.jpg" media="(min-width: 768px)" />
                     <img
-                        className="hero-img w-screen h-svh"
+                        className="hero-img"
                         src="/assets/hero-img-mobile.jpg"
                         alt="Interior design hero"
                     />
                 </picture>
 
-                <div className="hero-text">
-                    <h2 className="hero-heading">Timeless Tailored Spaces</h2>
-                    <div className="hero-heading-tablet">
-                        <span className="line-1">Timeless</span> <br />
-                        <span className="line-2">Tailored</span> <br />
-                        <span className="line-3">Spaces</span>
+                <div className="hero-text" aria-hidden="true">
+                    <h1 className="hero-heading">TIMELESS<br/>TAILORED<br/>SPACES</h1>
 
-                    </div>
+                    <h1 className="hero-heading-tablet" aria-hidden="true">
+                        <span className="line-1">TIMELESS</span>
+                        <span className="line-2">TAILORED</span>
+                        <span className="line-3">SPACES</span>
+                    </h1>
                 </div>
             </div>
         </section>

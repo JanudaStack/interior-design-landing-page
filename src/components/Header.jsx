@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="relative main-header flex items-center justify-between p-5 z-99">
+    <header className="absolute w-full main-header flex items-center justify-between p-5 z-99">
       <nav className="nav-menu">
         <menu className="desktop-nav hidden lg:flex gap-5">
           <a href="#">Projects</a>
